@@ -1,0 +1,5 @@
+#!/bin/sh
+find -L data/ -name '*R1_001.fastq.gz' \
+| sed -r \
+	-e 's#data/#results/#g' \
+	-e 's#_L001_R1_001\.fastq\.gz#_R1.trim.fastq.gz#g'
